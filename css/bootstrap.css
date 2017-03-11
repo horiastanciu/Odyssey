@@ -3170,13 +3170,11 @@ select[multiple].input-lg {
       -ms-user-select: none;
           user-select: none;
   background-image: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
 }
 
 .therapy_button{
   position: relative;
-  padding: 30px 80px;
+  padding: 30px 90px;
 }
 
 .switch_states{
@@ -3200,6 +3198,7 @@ select[multiple].input-lg {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -3211,10 +3210,7 @@ select[multiple].input-lg {
 }
 .btn:active,
 .btn.active {
-  background-image: none;
-  outline: 0;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+  outline: none;
 }
 .btn.disabled,
 .btn[disabled],
@@ -3280,7 +3276,7 @@ fieldset[disabled] .btn-default:focus,
 .btn-default[disabled].focus,
 fieldset[disabled] .btn-default.focus {
   background-color: #fff;
-  border-color: #ccc;
+  
 }
 .btn-default .badge {
   color: #fff;
@@ -3289,7 +3285,17 @@ fieldset[disabled] .btn-default.focus {
 .btn-primary {
   color: #fff;
   background-color: #a90329;
-  border-color: #6d0019;
+  
+}
+
+.btn-primary-info{
+  
+}
+
+.btn-primary-barclays {
+  color: #fff;
+  background-color: #06133b;
+  border-color: #06133b;
 }
 .btn-primary:focus,
 .btn-primary.focus {
@@ -3666,7 +3672,7 @@ fieldset[disabled] .btn-link:focus {
 .btn-group-lg > .btn {
   
   margin-top: 5%;
-  font-size: 40px;
+  font-size: 30px;
   line-height: 1.3333333;
   border-radius: 20px;
   font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
@@ -7088,8 +7094,8 @@ button.close {
 #colorwheel {
   /*margin: 20px auto;*/
   position: relative;
-  margin-left: 25%;
-  margin-top: 10%;
+  margin-left: 30%;
+  margin-top: 25%;
 }
 
 /*colorwheel on the whole screen - change in span 
@@ -7099,7 +7105,7 @@ span {
   position: absolute;
   top: 100px;
   left: 850px;
-  width: 70px;
+  width: 100px;
   height: 20px;
   -ms-transform-origin: -100px 50%;
   -webkit-transform-origin: -100px 50%;
@@ -7109,4 +7115,145 @@ span {
   opacity: 0.1;
 }
 
+/*popup icon*/
 
+.floating-action-button {
+    visibility: hidden;
+    background: $primary;
+    position: fixed;
+    bottom: 680px;
+    right: 25px;
+    z-index: 102;
+    color: white;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.3);
+    @include border-radius(2em);
+    @include opacity(0.9);
+
+    .fa {
+      font-size: 24px;
+    }
+
+    &:hover {
+      @include opacity(1);
+    }
+}
+
+.floating-action-button {
+  visibility: visible;
+}
+
+.box {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #06D85F;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 5px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 70%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+
+#popupMap{
+  position: relative;
+  width: 70%;
+  height: 300px;
+}
+
+#barclays{
+  background-image: url("../images/barclaysLogo.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  padding-left:0px; 
+}
+
+.btn span.icon {
+  background: url("../images/barclaysLogo.png") no-repeat;
+  float: left;
+  width: 10px;
+  height: 40px;
+}
+
+.tracklist-view{
+  margin-right: 80%;
+  padding-right: 200px;
+}
