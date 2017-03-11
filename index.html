@@ -7,7 +7,6 @@
     <head>
         <meta charset="UTF-8" />
         <link rel="stylesheet" type="text/css" href="css/demo.css" />
-        <link rel="stylesheet" type="text/css" href="css/style4.css" />
     <script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,38 +21,44 @@
     <body id="page">
       
 
-      <div class="video-background">
+      <!-- <div class="video-background">
 	    <div class="video-foreground">
-	      <iframe src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameborder="0" allowfullscreen></iframe>
+	      <iframe src="https://www.youtube.com/embed/VTlXttQL_Yk?start=29&controls=0&showinfo=0&rel=0&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
 	    </div>
-	  </div>
+	  </div> -->
 
-      <div class="container">
-        <div class="container" id="test">
-          <h3>Odyssey</h3><br><br> 
-        </div>
+	<div class="video-background">
+		<video id="intro" loop muted autoplay class="fullscreen-bg__video" frameborder="0" allowfullscreen>
+	    	<source src="images/aroundtheworld.mp4" type="video/mp4">
+	   	</video>
+	</div>
 
-      </div>
+	<div class="container">
+		<div id="test">
+		  <h2>Odyssey</h2>
+		  <!-- <p class="quote"><h3><i>"An odyssey is a long, eventful journey"</i></h3></p> -->
+		  <p class="quote"><h3><i>"Live your dream, and wear your passion."</i></h3></p>
+		</div>
 
+	</div>
 
-
-      <!-- Popup window -->
-      <div class="container">
-        <div id="popup1" class="overlay">
-          <div class="popup">
-            <h4>Odyssey</h4>
-            <a class="close" href="#">&times;</a>
-            <div class="content">
-              dadadadada
-            </div>
-          </div>
-        </div>
-      </div>
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-lg-10">
+				<!-- <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:3rgsDhGHZxZ9sB9DQWQfuf" position="relative" width="50%" height="100px" frameborder="0" allowtransparency="true"></iframe> -->
+			</div>
+			<div class="col-lg-8">
+				<div id="colorwheel"></div>
+			</div>
+		</div>
+	</div>
 
 
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/color.js"></script>
     </body>
 </html>

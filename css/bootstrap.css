@@ -12,7 +12,9 @@ html {
 }
 @media only screen and (max-width: 320px) {
 
-   body { font-size: 2em; }
+   body { 
+    font-size: 2em; 
+}
 
 }
 @media(min-width:60em){html{font-size: 100%}}
@@ -1096,6 +1098,7 @@ body {
   line-height: 1.42857143;
   color: #333;
   background-color: #fff;
+  overflow: hidden;
 }
 
 #page2 {
@@ -1216,7 +1219,7 @@ hr {
 
 }
 #test {
-    margin-top: 25px;
+    margin-top: -70px;
     font-size: 21px;
     text-align: center;
     animation: fadein 8s;
@@ -1367,13 +1370,13 @@ h2,
   margin-top: 70px;
   /*padding-bottom: 400px;*/
   line-height: 200px;
-  color: rgba(169,3,41, 0.8);
+  color: white;
 }
 h3,
 .h3 {
   position: relative;
   font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
-  font-size: 10em;
+  font-size: 2em;
   /*padding-left: 250px;*/
   margin-top: 70px;
   /*padding-bottom: 400px;*/
@@ -7024,3 +7027,86 @@ button.close {
 @media all and (max-width: 500px) {
 .vid-info .acronym { display: none; }
 }
+
+
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .fullscreen-bg {
+    background: url('../img/videoframe.jpg') center center / cover no-repeat;
+  }
+
+  .fullscreen-bg__video {
+    /*display: none;*/
+  }
+}
+
+.quote{
+  margin-top:-200px
+}
+
+#intro{
+  margin-bottom: -200px;
+}
+
+.spanActive{
+  opacity: 1;
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+}
+
+#colorwheel {
+  /*margin: 20px auto;*/
+  position: relative;
+  margin-left: 25%;
+  margin-top: 10%;
+}
+
+/*colorwheel on the whole screen - change in span 
+left: 600px; width: 1000px; transform-origin: -1px 50%;*/
+span {
+  cursor: pointer;
+  position: absolute;
+  top: 100px;
+  left: 850px;
+  width: 70px;
+  height: 20px;
+  -ms-transform-origin: -100px 50%;
+  -webkit-transform-origin: -100px 50%;
+  -moz-transform-origin: -100px 50%;
+  -o-transform-origin: -100px 50%;
+  transform-origin: -20px 50%;
+  opacity: 0.1;
+}
+
+
