@@ -1,0 +1,25 @@
+# Odyssey
+
+## Inspiration
+National Geographic and travelling the world.
+
+## What it does
+Odyssey is our method to make our users discover the world in an interactive way, by engaging their colour perception. By choosing one of our 360 colours, you can virtually travel to different places in the world.
+
+You could also discover the world by enabling the face recognition system, and the places that you will discover will be
+influenced by your current feeling.
+
+A different Spotify playlist will be generated for each of our videos from different areas of the world:
+Grand Canyon, Sri Lanka, Gobi Desert, Costa Rica, Dominican Republic, Cocos Islands, Norway, Kuala Lumpur.
+ 
+Is Samsung VR you could actually use our application, to focus/click on a colour, and then to redirect you to a place that you need to find.
+
+## Accomplishments that we're proud of
+Features:
+- emotion recognition  which helps you find a place in the world, your emotion is associated with a colour from the spectrum
+- generates a different playlist to listen to that day,
+- enables you to find more educational information about the geographical areas that you are are discovering
+
+## What's next for Odyssey
+For further implementation in Virtual Reality, you could actually use our application, to focus
+3 seconds on a colour, and then to redirect you to a place that you need to find.
