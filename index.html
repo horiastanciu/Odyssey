@@ -7,96 +7,102 @@
     <head>
       <meta charset="UTF-8" />
       <link rel="stylesheet" type="text/css" href="css/demo.css" />
-    <script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Odyssey</title>
+	    <script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
+      <script src="webcamjs-master/webcam.js"></script>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <title>Odyssey</title>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    </head>
-    <body id="page">
+      <!-- Bootstrap -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/bootstrap.css" rel="stylesheet">
+      </head>
 
 
-      <!-- <div class="video-background">
-	    <div class="video-foreground">
-	      <iframe src="https://www.youtube.com/embed/VTlXttQL_Yk?start=29&controls=0&showinfo=0&rel=0&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
-	    </div>
-	  </div> -->
+      <body id="page">
+        <div class="video-background">
+          <video id="intro" loop muted autoplay class="fullscreen-bg__video" frameborder="0" allowfullscreen>
+            <source src="images/aroundtheworld.mp4" type="video/mp4">
+          </video>
+        </div>
 
-	<div class="video-background">
-		<video id="intro" loop muted autoplay class="fullscreen-bg__video" frameborder="0" allowfullscreen>
-	    	<source src="images/aroundtheworld.mp4" type="video/mp4">
-	   	</video>
-	</div>
-
-	<div class="container">
-		<div id="test">
-		  <h2>Odyssey</h2>
-		  <!-- <p class="quote"><h3><i>"An odyssey is a long, eventful journey"</i></h3></p> -->
-		  <p class="quote"><h3><i>"Live your dream, and wear your passion."</i></h3></p>
-		  <p><a class="btn btn-primary-info btn-lg floating-action-button" id="learn" href="#popup1" role="button"><img src="images/lightbulb.png" height="90" width="90"></a></p>
-
-		</div>
+        <div class="container" id="test" style="height: 120vh">
+          <h2>Odyssey</h2>
+          
 
 
 
+          <p id="response"></p>
+            <div id="my_camera"></div>
+            <div id="my_result" style="display: none"></div>
+            
 
-		<div id="popup1" class="overlay">
-			<div class="popup">
-				<h4>Here i am</h4>
-				<a class="close" href="#">&times;</a>
-				<div class="content">
-					Biscuit chupa chups liquorice ice cream ice cream tart bonbon biscuit sweet roll. Tootsie roll oat cake lemon drops icing chocolate bar cheesecake sugar plum. Chocolate dragée chocolate cake sweet donut. Cotton candy bonbon wafer cookie apple pie gummi bears gummi bears pastry marshmallow. Chupa chups marshmallow muffin. Apple pie gummi bears gummi bears apple pie danish.
-				</div>
-				<br>
-				<img src="images/adam.png" id="popupMap">
-
-				<!-- <table class="table table-responsive">
-					<tr>
-						<td><img src="images/bleosky.png" id="popupMap"></td>
-						<td><button type="button" class="btn btn-primary btn-lg">Large button</button></td>
-					</tr>
-				</table> -->
-
-				<div class="row">
-
-					<div class="col-lg-8">
-						<img src="images/bleosky.png" id="popupMap">
-					</div>
-					<div class="col-lg-4">
-					<br><br><br><br><br><br>
-						<button type="button" class="btn btn-primary-barclays btn-lg"><img src="images/barclaysLogo.png" height="52" width="52"><a href="https://www.skyscanner.net/" target="_blank">Buy tickets</button></a></div>
-					</div>
-				</div>
-
-			</div>
-		</div>
+            <a class="btn btn-primary-info btn-lg snapshot-button" href="javascript:void(take_snapshot())" role="button">
+              <img src="images/camera.ico" height="65" width="65">
+            </a>
+            <a class="btn btn-primary-info btn-lg toggle-button" role="button">
+              <img src="images/snapshot.png" height="65" width="65">
+            </a>
 
 
+          <p id="lightBulb" style="display: none">
+            <a class="btn btn-primary-info btn-lg floating-action-button" id="learn" href="#popup1" role="button">  <img src="images/lightbulb.png" height="65" width="65">
+            </a>
+          </p>
+
+          <div id="popup1" class="overlay" style="z-index:2001;">
+            <div class="popup">
+              <h4 id="titlepop">Here I am</h4>
+              <a class="close" href="#">&times;</a>
+              <div class="content">
+                <div clas="row">
+                  <div class="col-lg-6">
+                  <div class="note"><p id="noteDescription">
+                      Biscuit chupa chups liquorice ice cream ice cream tart bonbon biscuit sweet roll. Tootsie roll oat cake lemon drops icing chocolate bar cheesecake sugar plum. Chocolate dragée chocolate cake sweet donut. Cotton candy bonbon wafer cookie apple pie gummi bears gummi bears pastry marshmallow. Chupa chups marshmallow muffin. Apple pie gummi bears gummi bears apple pie danish.
+                      Biscuit chupa chups liquorice ice cream ice cream tart bonbon biscuit sweet roll. Tootsie roll oat cake lemon drops icing chocolate bar cheesecake sugar plum. Chocolate dragée chocolate cake sweet donut. Cotton candy bonbon wafer cookie apple pie gummi bears gummi bears pastry marshmallow. Chupa chups marshmallow muffin. Apple pie gummi bears gummi bears apple pie danish.
+                      <!-- <img src="images/adam.png" id="popupMap"> -->
+                    </p></div>
+                    
+                  </div>
+                  <div class="col-lg-6">
+                      <iframe id="gmapsLink" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d59382090.11428333!2d1.535822218504157!3d24.713310866071527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x487a4d4c5226f5db%3A0xd9be143804fe6baa!2sManchester!3m2!1d53.480759299999995!2d-2.2426304999999997!4m5!1s0x3ae3975fdaaaaaab%3A0xb4a57cd965ae9fe5!2sAdam&#39;s+Peak%2C+Nallathanniya%2C+Sri+Lanka!3m2!1d6.8253536!2d80.522313!5e0!3m2!1sen!2suk!4v1489252891992" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                  </div>
+                </div>
+
+                <!-- <div class="row">
+                  <div class="col-lg-12">
+                    <button type="button" class="btn btn-primary-barclays btn-lg"><a target="_blank" href="https://www.skyscanner.net/">Buy tickets</a></button>
+                  </div> 
+              </div> --><!-- content -->
+            </div><!-- popup -->
+              
+          </div>
+
+          </div><!-- popup1 -->
+
+          <!-- ColorWheel -->
+          
+          
+            <div class="col-lg-12 col-sm-12 footer" id="tracklist" style="z-index:2000;">
+              
+                
+                  <div id="colorbar"></div>
+                
+              
+              <iframe align="middle" src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:3rgsDhGHZxZ9sB9DQWQfuf" width="100%" height="50%" frameborder="0" allowtransparency="true"></iframe>
+            </div>
+
+          </div>
 
 
-	</div>
+        </div> <!-- Container -->
 
-	<div class="container" style="margin-left: -250px; margin-top: 400px">
-		<div class="row">
-			<div class="col-lg-10">
-				<div id="colorwheel" style="margin-left: 650px; margin-top: -150px"></div>
-			</div>
-			<div class="col-lg-10" id="tracklist">
-				<iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:3rgsDhGHZxZ9sB9DQWQfuf" position="relative" width="50%" height="100px" frameborder="0" allowtransparency="true"></iframe>
-			</div>
-		</div>
-	</div>
-
-
-      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/color.js"></script>
-    </body>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="js/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/color.js"></script>
+      </body>
 </html>
